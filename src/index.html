@@ -5,14 +5,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Mesto</title>
-    <link href="./pages/index.css" rel="stylesheet">
+    <link href="<%=htmlWebpackPlugin.files.chunks.main.css %>" rel="stylesheet">
 </head>
 <body>
 
 <div class="root">
 
     <header class="header root__section">
-        <img alt="mesto logo" class="logo" src="./images/logo.svg">
+        <img alt="mesto logo" class="logo" src="<%=require('./images/logo.svg').default%>">
     </header>
 
     <div class="profile root__section">
@@ -31,7 +31,7 @@
 
     <div class="popup">
         <div class="popup__content">
-            <img alt="Close" class="popup__close popup__close_form" src="./images/close.svg">
+            <img alt="Close" class="popup__close popup__close_form" src="<%=require('./images/close.svg').default%>">
             <h3 class="popup__title"></h3>
             <form class="popup__form" novalidate>
                 <input class="popup__input popup__input_firstInput" type="text" required minlength="2" maxlength="30">
@@ -46,21 +46,14 @@
     <div class="popup popup__image-viewer">
         <div class="popup__image-container">
             <img alt="изображение с карточки" class="popup__image" src="">
-            <img alt="Close" class="popup__close popup__close_img" src="./images/close.svg">
+            <img alt="Close" class="popup__close popup__close_img" src="<%=require('./images/close.svg').default%>">
         </div>
     </div>
 </div>
 
-  <script src='./scripts/API.js'></script>
-  <script src='./scripts/Card.js'></script>
-  <script src='./scripts/CardList.js'></script>
-  <script src='./scripts/FormValidator.js' defer></script>
-  <script src='./scripts/Popup.js'></script>
-  <script src='./scripts/AddPlacePopup.js'></script>
-  <script src='./scripts/EditUserPopup.js'></script>
-  <script src='./scripts/ImageViewerPopup.js'></script>
-  <script src='./scripts/Userinfo.js'></script>
-  <script src='./scripts/script.js' defer></script>
+<script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
 </body>
 </html>
+
+ 
