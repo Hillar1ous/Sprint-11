@@ -1,6 +1,6 @@
 'use strict';
 
-class UserInfo {
+export default  class UserInfo {
     constructor() {
         this.name="Имя";
         this.about="О себе";

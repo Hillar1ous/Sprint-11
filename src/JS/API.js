@@ -1,6 +1,6 @@
 'use strict';
 
-class API {
+export default class API {
     constructor(userParams) {
         this.baseUrl = userParams.baseUrl;
         this.token = userParams.token;

@@ -1,6 +1,6 @@
 'use strict';
 
-class ImageViewPopup {
+export default class ImageViewPopup {
     constructor() {
         this.container = document.querySelector(".popup__image-viewer");
         this.closeImg = document.querySelector(".popup__close_img");

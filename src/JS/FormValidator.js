@@ -1,5 +1,5 @@
 'use strict';
-class FormValidator {
+export default class FormValidator {
     constructor() {
     };
     setEventListeners(obj) {
